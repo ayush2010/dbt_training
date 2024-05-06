@@ -1,0 +1,27 @@
+version: 2
+
+models: 
+
+  - name: dim_music_playlists
+    description: This model has playlists with all possible song information for each of the songs listed.
+    columns:
+      - name: track_id
+        tests: 
+          - not_null
+  
+  - name: dim_music_tracks
+    description: This model has a list of songs and all possible identifiers like price, bytes, artist, etc.
+    columns:
+      - name: track_id
+        tests: 
+          - unique
+          - not_null
+
+  - name: fct_music_sales
+    description: This table is basically a list of all transactions with all information about the song that was purchased.
+                  We have employee info, customer info, song info.
+    columns:
+      - name: invoice_lineid
+        tests: 
+          - unique
+          - not_null

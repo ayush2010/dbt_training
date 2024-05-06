@@ -1,0 +1,90 @@
+version: 2
+
+models: 
+
+  - name: stg_music__albums
+    description: This model has album names listed with their corresponding artist.
+    columns:
+      - name: album_id
+        tests: 
+          - unique
+          - not_null
+  
+  - name: stg_music__artists
+    description: This model has a list of musical artist names.
+    columns:
+      - name: artist_id
+        tests: 
+          - unique
+          - not_null
+
+  - name: stg_music__customers
+    description: This model has customer identification information as well as the id of the employee they dealt with.
+    columns:
+      - name: customer_id
+        tests: 
+          - unique
+          - not_null
+
+  - name: stg_music__employees
+    description: This model has basic employee identification information.
+    columns:
+      - name: employee_id
+        tests: 
+          - unique
+          - not_null
+
+  - name: stg_music__genres
+    description: This model has a list of musical genres.
+    columns:
+      - name: genre_id
+        tests: 
+          - unique
+          - not_null
+
+  - name: stg_music__invoice_lines
+    description: This model has a list of invoices with unit price and quantity.
+    columns:
+      - name: invoice_lineid
+        tests: 
+          - unique
+          - not_null
+
+  - name: stg_music__invoices
+    description: This model has customer identification information for each transaction.
+    columns:
+      - name: invoice_id
+        tests: 
+          - unique
+          - not_null
+
+  - name: stg_music__media_types
+    description: This model has a list of music mediums.
+    columns:
+      - name: mediatype_id
+        tests: 
+          - unique
+          - not_null
+
+  - name: stg_music__playlist_tracks
+    description: This model has a list of playlists and tracks that are included in the playlists.
+    columns:
+      - name: playlist_id
+        tests: 
+          - not_null
+          
+  - name: stg_music__playlists
+    description: This model has a list of playlists. 
+    columns:
+      - name: playlist_id
+        tests: 
+          - unique
+          - not_null
+
+  - name: stg_music__tracks
+    description: This model has a list of tracks with identifiers like length, price, bytes.
+    columns:
+      - name: track_id
+        tests: 
+          - unique
+          - not_null
