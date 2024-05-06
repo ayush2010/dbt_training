@@ -7,7 +7,7 @@ sources:
 
     tables:
       - name: album
-      - name: artists
+      - name: artist
       - name: customer
       - name: employee
       - name: genre

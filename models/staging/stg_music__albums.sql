@@ -1,3 +1,9 @@
+{{
+    config(
+        materialized='view'
+    )
+}}
+
 select
     albumid as album_id,
     title as album_title,
